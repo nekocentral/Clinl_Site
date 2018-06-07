@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>
+        CLINL Kernel
+    </title>
+    <meta name="description" content="The official website of the CLINL-Kernel. CLINL stands for C++-LINL is not Linux and was an initiative to renew Linux, started in 2018">
+    <meta name="keywords" content="CLINL, Kernel, GNU">
+    <meta name="author" content="Ludovic Lagouardette, Maximilian Wittmer, OxFFFFFFFFF">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css"
+        \>
+    <link rel="stylesheet" href="style.css" \>
+</head>
+
+<body class="container page">
+    <div class="row navbar">
+        <a href="index.html" class="col-xs-3 navbut">Home</a>
+        <a href="https://kernel.clinl.org" class="col-xs-3 navbut">Repository</a>
+        <a href="aboutus.html" class="col-xs-3 navbut">About us</a>
+        <a href="contribute.html" class="col-xs-3 navbut">Contribute</a>
+    </div>
+    <div class="par">
+        There are a few criteria that you have to meet in order to contribute. Make sure that you comply to all of them!
+        <ul>
+            <li>Knowledge of Modern C++</li>
+            <li>Willingness to learn</li>
+            <li>Knowledge of Backend C++</li>
+        </ul>
+        <span class="big">If you think that you could help us</span>, you will in a first time need to set up your local fossil repository.
+        On a terminal, type:
+        <div class="code">
+            $>fossil clone https://kernel.clinl.org ./clinl.fossil
+            <br> $>fossil open ./clinl.fossil
+        </div>
+        Then, compile a cross-compiler according to
+        <a href="https://wiki.osdev.org/GCC_Cross-Compiler">OSDevWiki</a>. Set the makefile up as you wish, in order for it to work on your machine.
+        <br> then, you can contribute. Edit the files just like you would edit them on a github repository. Once you are done,
+        <br>
+        <div class="code">
+            $>make clean
+            <br>$>fossil addremove
+            <br>$>fossil commit -m "your MEANINGFUL commit message"
+            <br>$>fossil push
+        </div>
+        If you are facing any problems, contact us
+        <a href="mailto:social@clinl.org">here!</a>
+    </div>
+
+</body>
+
+</html>
